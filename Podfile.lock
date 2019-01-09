@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - AsyncTimer (2.2.0)
+  - DrawableView (0.0.3)
+  - ObjectMapper (3.4.1)
+  - Pageboy (3.0.1)
+  - Spring (1.0.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7.0)
+  - AlamofireObjectMapper (~> 5.2)
+  - AsyncTimer
+  - DrawableView
+  - Pageboy (~> 3.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - AsyncTimer
+    - DrawableView
+    - ObjectMapper
+    - Pageboy
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: fafd0b2e8d4d46405bd86fa7ba84bb7f73a20b13
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  AsyncTimer: d8512868a7f4de79f58b6962d590f04b8dab5f7a
+  DrawableView: 4a6d9ba573f7b6e6e73d1ea549ad099c92aed76b
+  ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
+  Pageboy: ec0170fd880ea6fa3589219edfd64b554443ff6e
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+
+PODFILE CHECKSUM: 10bb4cc19d27bef66d32aae2f5af563286285c34
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i8h-g5-Ytd">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Akko Rounded Std Bold.otf">
+            <string>AkkoRoundedStd-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MenuViewController-->
+        <scene sceneID="dkp-FK-HLg">
+            <objects>
+                <viewController title="MenuViewController" id="i8h-g5-Ytd" customClass="MenuViewController" customModule="Count" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ft8-76-8Qg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPx-6u-KxR" userLabel="Header">
+                                <rect key="frame" x="16" y="44" width="343" height="203"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BrainTrainer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2lU-Ju-lhz" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="203"/>
+                                        <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="morph"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2lU-Ju-lhz" secondAttribute="bottom" id="F2F-mS-dqd"/>
+                                    <constraint firstAttribute="trailing" secondItem="2lU-Ju-lhz" secondAttribute="trailing" id="P4I-IJ-84u"/>
+                                    <constraint firstItem="2lU-Ju-lhz" firstAttribute="leading" secondItem="OPx-6u-KxR" secondAttribute="leading" id="Rtb-xr-m1S"/>
+                                    <constraint firstItem="2lU-Ju-lhz" firstAttribute="top" secondItem="OPx-6u-KxR" secondAttribute="top" id="i5A-Tf-MDK"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aU5-ha-4qM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-5o-mQu">
+                                <rect key="frame" x="0.0" y="247" width="375" height="406"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="per-bC-mAi">
+                                        <rect key="frame" x="43.333333333333343" y="0.0" width="288.33333333333326" height="406"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p0-i1-ZVE" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="288.33333333333331" height="135.33333333333334"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Practice">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="presentDifficulty:" destination="i8h-g5-Ytd" eventType="touchUpInside" id="pjw-bl-B5h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3Z-v7-x1W" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="143.33333333333331" width="288.33333333333331" height="135.33333333333331"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Time Attack">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="presentTimeAttack:" destination="i8h-g5-Ytd" eventType="touchUpInside" id="gqC-9r-h4W"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UK-8j-kiS" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="286.66666666666663" width="288.33333333333331" height="119.33333333333331"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Tutorial">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="launchTutorial:" destination="i8h-g5-Ytd" eventType="touchUpInside" id="hMm-Xg-k7H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="per-bC-mAi" firstAttribute="width" secondItem="Bi9-5o-mQu" secondAttribute="width" multiplier="1/1.3" id="9kA-Oy-9tl"/>
+                                    <constraint firstItem="per-bC-mAi" firstAttribute="centerY" secondItem="Bi9-5o-mQu" secondAttribute="centerY" id="KvC-PA-m8P"/>
+                                    <constraint firstItem="per-bC-mAi" firstAttribute="centerX" secondItem="Bi9-5o-mQu" secondAttribute="centerX" id="Nud-Fk-uWa"/>
+                                    <constraint firstItem="per-bC-mAi" firstAttribute="height" secondItem="Bi9-5o-mQu" secondAttribute="height" id="UMG-dq-ywY"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Forstulen 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qca-5J-nzJ">
+                                <rect key="frame" x="0.0" y="756" width="375" height="27"/>
+                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3193097710609436" green="0.70093899965286255" blue="0.96473807096481323" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Bi9-5o-mQu" firstAttribute="height" secondItem="Ft8-76-8Qg" secondAttribute="height" multiplier="1/2" id="17O-Aj-yWM"/>
+                            <constraint firstItem="vM3-7l-WMu" firstAttribute="trailing" secondItem="qca-5J-nzJ" secondAttribute="trailing" id="1k8-7B-X5P"/>
+                            <constraint firstItem="qca-5J-nzJ" firstAttribute="height" secondItem="Bi9-5o-mQu" secondAttribute="height" multiplier="1/15" id="427-87-JdT"/>
+                            <constraint firstItem="Bi9-5o-mQu" firstAttribute="leading" secondItem="vM3-7l-WMu" secondAttribute="leading" id="Crg-xg-8fM"/>
+                            <constraint firstItem="qca-5J-nzJ" firstAttribute="leading" secondItem="vM3-7l-WMu" secondAttribute="leading" id="DdK-wB-FPS"/>
+                            <constraint firstItem="OPx-6u-KxR" firstAttribute="height" secondItem="Ft8-76-8Qg" secondAttribute="height" multiplier="1/4" id="E42-iP-Fsg"/>
+                            <constraint firstItem="aU5-ha-4qM" firstAttribute="top" secondItem="Ft8-76-8Qg" secondAttribute="top" id="Gfk-E9-pkp"/>
+                            <constraint firstItem="vM3-7l-WMu" firstAttribute="trailing" secondItem="Bi9-5o-mQu" secondAttribute="trailing" id="HIF-VQ-7bA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OPx-6u-KxR" secondAttribute="trailing" id="TfT-na-bVe"/>
+                            <constraint firstItem="Bi9-5o-mQu" firstAttribute="top" secondItem="OPx-6u-KxR" secondAttribute="bottom" id="hr5-He-RRb"/>
+                            <constraint firstItem="aU5-ha-4qM" firstAttribute="bottom" secondItem="vM3-7l-WMu" secondAttribute="bottom" id="kdL-sv-i9H"/>
+                            <constraint firstItem="qca-5J-nzJ" firstAttribute="bottom" secondItem="vM3-7l-WMu" secondAttribute="bottom" constant="5" id="lEX-Qx-23C"/>
+                            <constraint firstItem="aU5-ha-4qM" firstAttribute="leading" secondItem="vM3-7l-WMu" secondAttribute="leading" id="oYl-MO-OUE"/>
+                            <constraint firstItem="aU5-ha-4qM" firstAttribute="trailing" secondItem="vM3-7l-WMu" secondAttribute="trailing" id="okP-Qg-IK0"/>
+                            <constraint firstItem="OPx-6u-KxR" firstAttribute="top" secondItem="vM3-7l-WMu" secondAttribute="top" id="pSy-A7-hYB"/>
+                            <constraint firstItem="OPx-6u-KxR" firstAttribute="leading" secondItem="Ft8-76-8Qg" secondAttribute="leadingMargin" id="rcG-Dw-BnZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vM3-7l-WMu"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="aU5-ha-4qM" id="tHB-Iv-sYq"/>
+                        <outlet property="practiceButton" destination="4p0-i1-ZVE" id="tse-of-cnh"/>
+                        <outlet property="timeAttackButton" destination="Y3Z-v7-x1W" id="JC9-JJ-akn"/>
+                        <outlet property="tutorialButton" destination="9UK-8j-kiS" id="gIH-Tb-rve"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="gameViewController" id="WbA-gT-i6b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cq-KE-AVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1601" y="133"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Count" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-zg-f69" customClass="UIImageView">
+                                <rect key="frame" x="0.0" y="133.33333333333331" width="375" height="644.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YO0-Ca-ec2" userLabel="GameZone">
+                                <rect key="frame" x="0.0" y="133.33333333333331" width="375" height="535.33333333333348"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baT-hy-lv5">
+                                        <rect key="frame" x="135.66666666666666" y="237.66666666666663" width="104" height="60"/>
+                                        <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="baT-hy-lv5" firstAttribute="centerX" secondItem="YO0-Ca-ec2" secondAttribute="centerX" id="oWG-ar-qHA"/>
+                                    <constraint firstItem="baT-hy-lv5" firstAttribute="centerY" secondItem="YO0-Ca-ec2" secondAttribute="centerY" id="ttb-oY-frJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDy-jE-ZTh" userLabel="Header">
+                                <rect key="frame" x="0.0" y="43.999999999999993" width="375" height="89.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rY-U0-aW7" userLabel="BackButton">
+                                        <rect key="frame" x="20" y="10" width="24.666666666666671" height="69.333333333333329"/>
+                                        <state key="normal" image="Back"/>
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sG8-5L-CHE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTJ-lA-gBh" userLabel="RefreshButton">
+                                        <rect key="frame" x="330.33333333333331" y="20.000000000000004" width="24.666666666666686" height="49.333333333333343"/>
+                                        <state key="normal" image="Refresh"/>
+                                        <connections>
+                                            <action selector="refreshGameViews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ius-jr-VN4"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lch-59-Nak" userLabel="CenterView">
+                                        <rect key="frame" x="64.666666666666671" y="10" width="245.66666666666663" height="69.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="7gp-dZ-EAA" customClass="SpringLabel" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="245.66666666666666" height="69.333333333333329"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Gom-3x-bZ3" appends="YES" id="1fM-HU-EMn"/>
+                                                </connections>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="7gp-dZ-EAA" secondAttribute="bottom" id="XVh-HF-5Yw"/>
+                                            <constraint firstItem="7gp-dZ-EAA" firstAttribute="top" secondItem="lch-59-Nak" secondAttribute="top" id="geh-S4-65z"/>
+                                            <constraint firstAttribute="trailing" secondItem="7gp-dZ-EAA" secondAttribute="trailing" id="n88-Dw-fCN"/>
+                                            <constraint firstItem="7gp-dZ-EAA" firstAttribute="leading" secondItem="lch-59-Nak" secondAttribute="leading" id="vdo-Tu-yMr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lch-59-Nak" secondAttribute="bottom" constant="10" id="2mR-bL-DS3"/>
+                                    <constraint firstAttribute="bottom" secondItem="jTJ-lA-gBh" secondAttribute="bottom" constant="20" id="8qm-hK-W5h"/>
+                                    <constraint firstItem="jTJ-lA-gBh" firstAttribute="width" secondItem="1rY-U0-aW7" secondAttribute="width" id="Ah0-28-YaF"/>
+                                    <constraint firstItem="lch-59-Nak" firstAttribute="top" secondItem="MDy-jE-ZTh" secondAttribute="top" constant="10" id="Ehe-ih-lpD"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1rY-U0-aW7" secondAttribute="bottom" constant="10" id="GTf-H7-A8i"/>
+                                    <constraint firstItem="lch-59-Nak" firstAttribute="width" secondItem="1rY-U0-aW7" secondAttribute="width" multiplier="10" id="MGs-0x-DFQ"/>
+                                    <constraint firstItem="1rY-U0-aW7" firstAttribute="leading" secondItem="MDy-jE-ZTh" secondAttribute="leading" constant="20" id="Mmg-Jl-LDN"/>
+                                    <constraint firstItem="jTJ-lA-gBh" firstAttribute="top" secondItem="MDy-jE-ZTh" secondAttribute="top" constant="20" id="VJ4-vA-oIx"/>
+                                    <constraint firstAttribute="trailing" secondItem="jTJ-lA-gBh" secondAttribute="trailing" constant="20" id="X56-S3-zYQ"/>
+                                    <constraint firstItem="1rY-U0-aW7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MDy-jE-ZTh" secondAttribute="top" constant="10" id="YCg-co-pdg"/>
+                                    <constraint firstItem="lch-59-Nak" firstAttribute="leading" secondItem="1rY-U0-aW7" secondAttribute="trailing" constant="20" id="gQC-um-eQ1"/>
+                                    <constraint firstItem="jTJ-lA-gBh" firstAttribute="leading" secondItem="lch-59-Nak" secondAttribute="trailing" constant="20" id="hwn-1Y-Fc8"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="SKR-3r-mbo">
+                                <rect key="frame" x="10" y="668.66666666666663" width="355" height="89.333333333333371"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.015536895021796227" green="0.70915871858596802" blue="0.98749274015426636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JPa-zg-f69" firstAttribute="top" secondItem="MDy-jE-ZTh" secondAttribute="bottom" id="1lo-Uh-PYr"/>
+                            <constraint firstItem="MMT-wQ-Chq" firstAttribute="bottom" secondItem="SKR-3r-mbo" secondAttribute="bottom" constant="20" id="3kI-J4-ZDG"/>
+                            <constraint firstItem="YO0-Ca-ec2" firstAttribute="top" secondItem="MDy-jE-ZTh" secondAttribute="bottom" id="443-jJ-LRg"/>
+                            <constraint firstItem="MMT-wQ-Chq" firstAttribute="bottom" secondItem="JPa-zg-f69" secondAttribute="bottom" id="7Sk-D3-eos"/>
+                            <constraint firstItem="JPa-zg-f69" firstAttribute="leading" secondItem="MMT-wQ-Chq" secondAttribute="leading" id="9II-ub-TT5"/>
+                            <constraint firstItem="SKR-3r-mbo" firstAttribute="leading" secondItem="MMT-wQ-Chq" secondAttribute="leading" constant="10" id="B56-f5-8C4"/>
+                            <constraint firstItem="MDy-jE-ZTh" firstAttribute="top" secondItem="MMT-wQ-Chq" secondAttribute="top" id="CKh-wK-GGI"/>
+                            <constraint firstItem="YO0-Ca-ec2" firstAttribute="leading" secondItem="MMT-wQ-Chq" secondAttribute="leading" id="JFF-EZ-ePC"/>
+                            <constraint firstItem="MMT-wQ-Chq" firstAttribute="trailing" secondItem="SKR-3r-mbo" secondAttribute="trailing" constant="10" id="Ro5-0g-Qgh"/>
+                            <constraint firstItem="SKR-3r-mbo" firstAttribute="height" secondItem="YO0-Ca-ec2" secondAttribute="height" multiplier="1/6" id="YNj-ty-hCf"/>
+                            <constraint firstItem="MDy-jE-ZTh" firstAttribute="leading" secondItem="MMT-wQ-Chq" secondAttribute="leading" id="eRy-9P-qEH"/>
+                            <constraint firstItem="MMT-wQ-Chq" firstAttribute="trailing" secondItem="JPa-zg-f69" secondAttribute="trailing" id="hXT-se-udP"/>
+                            <constraint firstItem="YO0-Ca-ec2" firstAttribute="height" secondItem="MDy-jE-ZTh" secondAttribute="height" multiplier="6" id="laq-Yf-fDn"/>
+                            <constraint firstItem="MMT-wQ-Chq" firstAttribute="trailing" secondItem="MDy-jE-ZTh" secondAttribute="trailing" id="s51-Tm-rhs"/>
+                            <constraint firstItem="SKR-3r-mbo" firstAttribute="top" secondItem="YO0-Ca-ec2" secondAttribute="bottom" id="shR-v9-bOb"/>
+                            <constraint firstItem="MMT-wQ-Chq" firstAttribute="trailing" secondItem="YO0-Ca-ec2" secondAttribute="trailing" id="xBN-7f-YSo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MMT-wQ-Chq"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="1rY-U0-aW7" id="Pyx-vo-ueb"/>
+                        <outlet property="drawingZoneCanvas" destination="JPa-zg-f69" id="C5B-8g-XqA"/>
+                        <outlet property="gameHeaderLabel" destination="7gp-dZ-EAA" id="0oB-yr-ebt"/>
+                        <outlet property="gameOperatorStackView" destination="SKR-3r-mbo" id="MSF-Uz-3tB"/>
+                        <outlet property="gameValueLabel" destination="baT-hy-lv5" id="0qt-go-loD"/>
+                        <outlet property="gameZoneView" destination="YO0-Ca-ec2" id="jfv-V4-QUb"/>
+                        <outlet property="refreshButton" destination="jTJ-lA-gBh" id="mYY-3j-vqG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gom-3x-bZ3">
+                    <connections>
+                        <action selector="skipCalculation:" destination="BYZ-38-t0r" id="6Fq-Tz-m4b"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Difficulty View Controller-->
+        <scene sceneID="qkb-ha-Al8">
+            <objects>
+                <viewController storyboardIdentifier="DifficultyViewController" id="Ezd-9C-BHI" customClass="DifficultyViewController" customModule="Count" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xdH-z1-Say">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpv-3u-n1u">
+                                <rect key="frame" x="43.333333333333343" y="203" width="288.33333333333326" height="406"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pWs-mE-hcy">
+                                        <rect key="frame" x="10" y="10" width="268.33333333333331" height="386"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8E9-oJ-2DE">
+                                                <rect key="frame" x="0.0" y="0.0" width="268.33333333333331" height="70.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="42"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKM-gh-lTT" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="78.666666666666686" width="268.33333333333331" height="71"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Easy">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectEasyMode:" destination="Ezd-9C-BHI" eventType="touchUpInside" id="Z8b-fC-yPI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3n-47-Rmd" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="157.66666666666669" width="268.33333333333331" height="70.666666666666686"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Medium">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectMediumMode:" destination="Ezd-9C-BHI" eventType="touchUpInside" id="ftI-Qd-6fD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IA7-xf-9qa" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="236.33333333333331" width="268.33333333333331" height="71"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Hard">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectHardMode:" destination="Ezd-9C-BHI" eventType="touchUpInside" id="mDZ-ZG-pvl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8c-od-Yvp" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="315.33333333333337" width="268.33333333333331" height="70.666666666666686"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dismissView:" destination="Ezd-9C-BHI" eventType="touchUpInside" id="xtr-lQ-7ng"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99207013845443726" green="0.99221235513687134" blue="0.99203914403915405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.044433325529098511" green="0.014287693426012993" blue="0.045250110328197479" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pWs-mE-hcy" secondAttribute="bottom" constant="10" id="OhO-Wq-LCc"/>
+                                    <constraint firstAttribute="trailing" secondItem="pWs-mE-hcy" secondAttribute="trailing" constant="10" id="SNU-F0-wF2"/>
+                                    <constraint firstItem="pWs-mE-hcy" firstAttribute="top" secondItem="Kpv-3u-n1u" secondAttribute="top" constant="10" id="Wak-ZK-l8u"/>
+                                    <constraint firstItem="pWs-mE-hcy" firstAttribute="leading" secondItem="Kpv-3u-n1u" secondAttribute="leading" constant="10" id="eEc-c0-GMA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.016238238662481308" green="0.0074998778291046619" blue="0.012017225846648216" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kpv-3u-n1u" firstAttribute="height" secondItem="xdH-z1-Say" secondAttribute="height" multiplier="1/2" id="LK3-id-auD"/>
+                            <constraint firstItem="Kpv-3u-n1u" firstAttribute="centerY" secondItem="xdH-z1-Say" secondAttribute="centerY" id="YIe-cw-nV8"/>
+                            <constraint firstItem="Kpv-3u-n1u" firstAttribute="width" secondItem="xdH-z1-Say" secondAttribute="width" multiplier="1/1.3" id="Zfu-43-UVY"/>
+                            <constraint firstItem="Kpv-3u-n1u" firstAttribute="centerX" secondItem="xdH-z1-Say" secondAttribute="centerX" id="eRp-hN-zc2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oKC-ZQ-veO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oom-GL-pev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1602" y="-655"/>
+        </scene>
+        <!--Time Attack View Controller-->
+        <scene sceneID="WPh-LG-HYC">
+            <objects>
+                <viewController storyboardIdentifier="TimeAttackViewController" id="Y79-9y-Vjf" customClass="TimeAttackViewController" customModule="Count" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s4p-YB-Pej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3W-9B-8Lu">
+                                <rect key="frame" x="0.0" y="44" width="375" height="135.33333333333334"/>
+                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="DiN-8j-SbT">
+                                <rect key="frame" x="10" y="179.33333333333334" width="355" height="270.66666666666663"/>
+                                <string key="text">In Time Attack mode, you will have to beat 7 calculations down.
+Contrary to the practice mode, this is not possible to skip one of them.
+Do your best and hurry up, time goes by!</string>
+                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7LU-5M-Ygf" userLabel="PBView">
+                                <rect key="frame" x="0.0" y="470.33333333333331" width="375" height="162.33333333333331"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zWX-9W-22D">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="162.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Personal Best:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaA-5C-2GR">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="52.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAo-xH-m2U">
+                                                <rect key="frame" x="0.0" y="62.666666666666693" width="375" height="99.666666666666686"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="48"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zWX-9W-22D" firstAttribute="top" secondItem="7LU-5M-Ygf" secondAttribute="top" id="FEr-Ot-tea"/>
+                                    <constraint firstAttribute="bottom" secondItem="zWX-9W-22D" secondAttribute="bottom" id="MzM-id-WUx"/>
+                                    <constraint firstAttribute="trailing" secondItem="zWX-9W-22D" secondAttribute="trailing" id="O4w-RW-AcW"/>
+                                    <constraint firstItem="zWX-9W-22D" firstAttribute="leading" secondItem="7LU-5M-Ygf" secondAttribute="leading" id="fBY-Bx-GUI"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-IO-KGb">
+                                <rect key="frame" x="31.333333333333343" y="632.66666666666663" width="312.33333333333326" height="135.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2B-p3-QHg" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="312.33333333333331" height="60.666666666666664"/>
+                                        <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                        <state key="normal" title="Let's go!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startTimeAttack:" destination="Y79-9y-Vjf" eventType="touchUpInside" id="kyi-AL-uYC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGy-TS-FMI" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70.666666666666742" width="312.33333333333331" height="64.666666666666686"/>
+                                        <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissView:" destination="Y79-9y-Vjf" eventType="touchUpInside" id="CnT-Ry-YOk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01553689502" green="0.70915871860000002" blue="0.9874927402" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Knu-IO-KGb" firstAttribute="centerX" secondItem="s4p-YB-Pej" secondAttribute="centerX" id="6zw-ib-Bbd"/>
+                            <constraint firstItem="7LU-5M-Ygf" firstAttribute="trailing" secondItem="853-as-6uR" secondAttribute="trailing" id="9lh-P9-Evn"/>
+                            <constraint firstItem="7LU-5M-Ygf" firstAttribute="leading" secondItem="853-as-6uR" secondAttribute="leading" id="AfM-I7-lvU"/>
+                            <constraint firstItem="V3W-9B-8Lu" firstAttribute="width" secondItem="s4p-YB-Pej" secondAttribute="width" id="CNw-5n-W4K"/>
+                            <constraint firstItem="DiN-8j-SbT" firstAttribute="leading" secondItem="853-as-6uR" secondAttribute="leading" constant="10" id="QP4-2m-MFc"/>
+                            <constraint firstItem="DiN-8j-SbT" firstAttribute="height" secondItem="s4p-YB-Pej" secondAttribute="height" multiplier="1/3" id="Tuk-si-jH4"/>
+                            <constraint firstItem="853-as-6uR" firstAttribute="bottom" secondItem="Knu-IO-KGb" secondAttribute="bottom" constant="10" id="UEy-7T-GId"/>
+                            <constraint firstItem="V3W-9B-8Lu" firstAttribute="leading" secondItem="853-as-6uR" secondAttribute="leading" id="V2I-Gt-t7s"/>
+                            <constraint firstItem="853-as-6uR" firstAttribute="trailing" secondItem="DiN-8j-SbT" secondAttribute="trailing" constant="10" id="VT7-gf-avk"/>
+                            <constraint firstItem="Knu-IO-KGb" firstAttribute="height" secondItem="s4p-YB-Pej" secondAttribute="height" multiplier="1/6" id="bzT-Tw-IdX"/>
+                            <constraint firstItem="7LU-5M-Ygf" firstAttribute="width" secondItem="s4p-YB-Pej" secondAttribute="width" id="cva-Eg-k9b"/>
+                            <constraint firstItem="Knu-IO-KGb" firstAttribute="top" secondItem="7LU-5M-Ygf" secondAttribute="bottom" id="fuM-gr-E59"/>
+                            <constraint firstItem="V3W-9B-8Lu" firstAttribute="top" secondItem="853-as-6uR" secondAttribute="top" id="ge9-5x-d1S"/>
+                            <constraint firstItem="Knu-IO-KGb" firstAttribute="width" secondItem="s4p-YB-Pej" secondAttribute="width" multiplier="1/1.2" id="nL1-Tm-UZR"/>
+                            <constraint firstItem="7LU-5M-Ygf" firstAttribute="height" secondItem="s4p-YB-Pej" secondAttribute="height" multiplier="1/5" id="uKl-qI-YS3"/>
+                            <constraint firstItem="DiN-8j-SbT" firstAttribute="top" secondItem="V3W-9B-8Lu" secondAttribute="bottom" id="vI8-Q8-o61"/>
+                            <constraint firstItem="V3W-9B-8Lu" firstAttribute="height" secondItem="s4p-YB-Pej" secondAttribute="height" multiplier="1/6" id="xrt-rR-fRb"/>
+                            <constraint firstItem="V3W-9B-8Lu" firstAttribute="trailing" secondItem="853-as-6uR" secondAttribute="trailing" id="zzP-8v-Lgi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="853-as-6uR"/>
+                    </view>
+                    <connections>
+                        <outlet property="personalBestLabel" destination="tAo-xH-m2U" id="t8B-fa-bsL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCm-Zh-1bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1602" y="953"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back" width="58" height="100"/>
+        <image name="Background" width="640" height="1024"/>
+        <image name="Refresh" width="120.66666412353516" height="120.66666412353516"/>
+    </resources>
+</document>

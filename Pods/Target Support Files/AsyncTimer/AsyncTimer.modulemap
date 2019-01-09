@@ -1,0 +1,6 @@
+framework module AsyncTimer {
+  umbrella header "AsyncTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
