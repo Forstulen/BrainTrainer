@@ -12,9 +12,27 @@ import ObjectMapper
 enum GameMode {
     case practice
     case timeAttack
+    case random
 }
 
 class CalculationManager {
+    // MARK: - Error
+    public enum Calcul: Error {
+        case divideError(String)
+    }
+    
+    // MARK: - Struct
+    struct RandomCalculationEntity {
+        public enum Status {
+            case Initial
+            case Calculated
+        }
+        
+        var number : Int
+        var status : Status = .Initial
+    }
+    
+    
     // MARK: - Properties
     let calculationFileName : String                            = "calculations.json"
     let saveFileName        : String                            = "save.json"
@@ -158,6 +176,8 @@ class CalculationManager {
             let calc = self.timeAttackList.first
             
             return calc
+        } else if self.mode == .random {
+            return self.randomCalcul()
         } else {
             guard let index = self.currentIndexes[level] else {
                 return nil
@@ -175,6 +195,8 @@ class CalculationManager {
             }
   
             return nil
+        } else if self.mode == .random {
+            return self.randomCalcul()
         } else {
             if let calc = self.calculations[level]?[(self.currentIndexes[level]! + 1) % (self.calculations[level]?.count)!] {
                 self.currentIndexes[level] = (self.currentIndexes[level]! + 1) % (self.calculations[level]?.count)!
@@ -218,5 +240,111 @@ class CalculationManager {
             return self.noPersonalBest
         }
         return self.status.pb!
+    }
+    
+    func randomCalcul() -> Calculation {
+        var possibleNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 50, 100].shuffled()
+        var selectedNumbers = [RandomCalculationEntity]()
+        
+        //Select the numbers will be used to calculate the result
+        for _ in 0...Int.random(in: 3...6) {
+            let entity = RandomCalculationEntity(number: possibleNumbers.removeFirst(), status: .Initial)
+
+            selectedNumbers.append(entity)
+        }
+        
+        var array = selectedNumbers.map( {$0.number} )
+        
+        //DEBUG
+        array.map( { print("\($0)")} )
+        print(" ")
+        
+        let x: Range = (selectedNumbers.count / 2)..<selectedNumbers.count
+        //Add "coefficient" for add sub and mul
+        let operations = ["add", "add", "sub", "sub", "mul", "mul", "div"]
+        var maxOperationsNumber = Int.random(in: x.clamped(to: (x.min() ?? 2)..<selectedNumbers.count))
+        
+        let operationBlock = { (operationNumberLeft: Int, op : (Int, Int) throws -> Int) -> Void in
+            var entity1 : RandomCalculationEntity? = nil
+            var entity2 : RandomCalculationEntity? = nil
+            
+            //Be sure to use all the calculated numbers
+            if (operationNumberLeft <= 2) {
+                if let index = selectedNumbers.firstIndex(where: { $0.status == .Calculated }) {
+                    entity1 = selectedNumbers.remove(at: index)
+                }
+                
+                if let index = selectedNumbers.firstIndex(where: { $0.status == .Calculated }) {
+                    entity2 = selectedNumbers.remove(at: index)
+                }
+            }
+            
+            if entity1 == nil {
+                entity1 = selectedNumbers.remove(at: Int.random(in: 0..<selectedNumbers.count))
+            }
+            
+            if entity2 == nil {
+                entity2 = selectedNumbers.remove(at: Int.random(in: 0..<selectedNumbers.count))
+            }
+            
+            let minimumValue    = entity1!.number > entity2!.number ? entity2!.number : entity1!.number
+            let maximumValue    = entity2!.number > entity1!.number ? entity2!.number : entity1!.number
+            
+            do {
+                let newValue = try op(maximumValue, minimumValue)
+        
+                entity1!.number  = newValue
+                entity1!.status  = .Calculated
+            } catch _ {
+                selectedNumbers.append(entity2!)
+            }
+        
+            defer {
+                selectedNumbers.append(entity1!)
+            }
+        }
+        
+        //Do calculations by pair
+        for i in 0...maxOperationsNumber {
+            let op = operations.randomElement()
+            
+            if selectedNumbers.count == 1 {
+                break
+            }
+            
+            switch op {
+                case "add":
+                    operationBlock(maxOperationsNumber - i, { (x :Int, y: Int) -> Int in
+                        print("\(x) + \(y) = \(x + y)")
+                        return x + y })
+                case "sub":
+                    operationBlock(maxOperationsNumber - i, { (x :Int, y: Int) -> Int in
+                        print("\(x) - \(y) = \(x - y)")
+                        return x - y })
+                case "mul":
+                    operationBlock(maxOperationsNumber - i, { (x :Int, y: Int) -> Int in
+                        print("\(x) * \(y) = \(x * y)")
+                        return x * y })
+                case "div":
+                    operationBlock(maxOperationsNumber - i, { (x :Int, y: Int) -> Int in
+                        if y != 0 && x % y == 0 {
+                            print("\(x) / \(y) = \(x / y)")
+                            return x / y
+                        }
+                        maxOperationsNumber += 1
+                        throw Calcul.divideError("Cannot divide")
+                    })
+                default:
+                    operationBlock(maxOperationsNumber - i, { (x :Int, y: Int) -> Int in return x + y })
+            }
+        }
+        
+        //Remove any number which could be equals to the target number
+    
+        let n = selectedNumbers.filter( { $0.status == .Calculated } ).first!.number
+        
+        array.removeAll(where: { $0 == n })
+        
+        return Calculation(numbers: array, number: n)
     }
 }

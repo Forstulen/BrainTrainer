@@ -75,7 +75,7 @@
                                         <rect key="frame" x="43.333333333333343" y="0.0" width="288.33333333333326" height="406"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p0-i1-ZVE" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="288.33333333333331" height="135.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288.33333333333331" height="101.66666666666667"/>
                                                 <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
                                                 <state key="normal" title="Practice">
@@ -105,7 +105,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3Z-v7-x1W" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="143.33333333333331" width="288.33333333333331" height="135.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="109.66666666666669" width="288.33333333333331" height="101.33333333333331"/>
                                                 <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
                                                 <state key="normal" title="Time Attack">
@@ -134,8 +134,35 @@
                                                     <action selector="presentTimeAttack:" destination="i8h-g5-Ytd" eventType="touchUpInside" id="gqC-9r-h4W"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ1-FI-xbP" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="218.99999999999997" width="288.33333333333331" height="101.66666666666666"/>
+                                                <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
+                                                <state key="normal" title="Random">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="presentRandom:" destination="i8h-g5-Ytd" eventType="touchUpInside" id="M4T-p8-7GF"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UK-8j-kiS" customClass="MenuButtonView" customModule="Count" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="286.66666666666663" width="288.33333333333331" height="119.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="328.66666666666663" width="288.33333333333331" height="77.333333333333314"/>
                                                 <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="32"/>
                                                 <state key="normal" title="Tutorial">
@@ -172,7 +199,7 @@
                                     <constraint firstItem="per-bC-mAi" firstAttribute="height" secondItem="Bi9-5o-mQu" secondAttribute="height" id="UMG-dq-ywY"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Forstulen 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qca-5J-nzJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Romain Tholimet 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qca-5J-nzJ">
                                 <rect key="frame" x="0.0" y="756" width="375" height="27"/>
                                 <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

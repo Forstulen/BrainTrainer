@@ -41,6 +41,13 @@ class MenuViewController: UIViewController {
         present(viewController, animated: true)
     }
     
+    @IBAction func presentRandom(_ sender: Any) {
+        CalculationManager.shared().setMode(mode: .random)
+        
+        performSegue(withIdentifier: "gameViewController", sender: self)
+    }
+    
+    
     @IBAction func presentTimeAttack(_ sender: Any) {
         self.presentModal(viewControllerName: "TimeAttackViewController")
     }

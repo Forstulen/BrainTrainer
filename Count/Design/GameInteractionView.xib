@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANC-de-RB3">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANC-de-RB3">
+                    <rect key="frame" x="5" y="0.0" width="365" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,9 +32,9 @@
             <color key="backgroundColor" red="0.067896313969999997" green="0.56357365849999996" blue="0.81113803390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ANC-de-RB3" secondAttribute="bottom" id="6wT-aB-YuR"/>
-                <constraint firstItem="ANC-de-RB3" firstAttribute="leading" secondItem="sbK-Xi-24K" secondAttribute="leading" id="9xk-tl-017"/>
+                <constraint firstItem="ANC-de-RB3" firstAttribute="leading" secondItem="sbK-Xi-24K" secondAttribute="leading" constant="5" id="9xk-tl-017"/>
                 <constraint firstItem="ANC-de-RB3" firstAttribute="top" secondItem="sbK-Xi-24K" secondAttribute="top" id="CAv-aw-Hyj"/>
-                <constraint firstAttribute="trailing" secondItem="ANC-de-RB3" secondAttribute="trailing" id="ECp-1z-wt2"/>
+                <constraint firstAttribute="trailing" secondItem="ANC-de-RB3" secondAttribute="trailing" constant="5" id="ECp-1z-wt2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fJP-mr-axa"/>
             <userDefinedRuntimeAttributes>

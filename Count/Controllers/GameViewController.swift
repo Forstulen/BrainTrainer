@@ -100,13 +100,7 @@ class GameViewController: UIViewController {
     @IBAction func refreshGameViews(_ sender: Any) {
         resetCalculation()
         initializeGameView()
-        
-        self.refreshCounter += 1
-        
-        if self.refreshCounter >= 3 && CalculationManager.shared().mode != .timeAttack {
-            self.gameHeaderLabel.text = self.skipHint
-            self.canSkip = true
-        }
+        checkCanSkip()
     }
     @IBAction func skipCalculation(_ sender: Any) {
         if canSkip {
@@ -123,7 +117,9 @@ class GameViewController: UIViewController {
         let radius      = (self.gameZoneView.frame.width / 2.0) * 0.75 //75%
         let center      = CGPoint(x: self.gameZoneView.frame.width / 2.0, y: self.gameZoneView.frame.height / 2.0)
         
-        if CalculationManager.shared().mode != .timeAttack {
+        if CalculationManager.shared().mode == .random {
+            self.gameHeaderLabel.text = "∞"
+        } else if CalculationManager.shared().mode != .timeAttack {
             self.gameHeaderLabel.text = "\(CalculationManager.shared().getCurrentIndex(level: CalculationManager.shared().getCurrentLevel()) + 1)/\(CalculationManager.shared().getTotalCalculationNumber(level: CalculationManager.shared().getCurrentLevel()))"
         }
         
@@ -318,6 +314,14 @@ class GameViewController: UIViewController {
         }
     }
     
+    private func checkCanSkip() {
+        self.refreshCounter += 1
+        if self.refreshCounter >= 3 && CalculationManager.shared().mode != .timeAttack {
+            self.gameHeaderLabel.text = self.skipHint
+            self.canSkip = true
+        }
+    }
+    
     private func checkResult(result : Int) {
         if result == self.calculation.number {
             self.gameValueLabel.text = self.completeWord
@@ -348,6 +352,7 @@ class GameViewController: UIViewController {
                 }
                 resetCalculation()
                 initializeGameView()
+                checkCanSkip()
             }
         }
     }
