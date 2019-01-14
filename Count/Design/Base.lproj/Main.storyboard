@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPx-6u-KxR" userLabel="Header">
                                 <rect key="frame" x="16" y="44" width="343" height="203"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BrainTrainer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2lU-Ju-lhz" customClass="SpringLabel" customModule="Spring">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BrainTrainer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2lU-Ju-lhz" customClass="SpringLabel" customModule="Spring">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="203"/>
                                         <fontDescription key="fontDescription" name="AkkoRoundedStd-Bold" family="Akko Rounded Std Bold" pointSize="60"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
